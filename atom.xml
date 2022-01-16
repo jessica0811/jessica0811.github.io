@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title type="text">jessica&#39;s blog</title>
+    <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
+    <updated>2022-01-16T18:37:07&#43;08:00</updated>
+    <id>https://jessica0811.github.io/</id>
+    <link rel="alternate" type="text/html" href="https://jessica0811.github.io/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://jessica0811.github.io/atom.xml" />
+    <author>
+            <name>jessica</name>
+            <uri>https://jessica0811.github.io/</uri>
+            </author>
+    
+    <generator uri="https://gohugo.io/" version="0.84.3">Hugo</generator>
+        <entry>
+            <title type="text">微服务</title>
+            <link rel="alternate" type="text/html" href="https://jessica0811.github.io/posts/first/" />
+            <id>https://jessica0811.github.io/posts/first/</id>
+            <updated>2022-01-16T14:12:06&#43;08:00</updated>
+            <published>2022-01-12T00:00:00&#43;00:00</published>
+            <author>
+                    <name>jessica</name>
+                    <uri>https://jessica0811.github.io/</uri>
+                    </author>
+            <summary type="html">微服务系列</summary>
+            
+                <content type="html">&lt;h2 id=&#34;架构&#34;&gt;架构&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;每个功能抽取成一个一个的微服务&lt;/li&gt;
+&lt;li&gt;微服务之间访问是轻量级的，RPC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;go-kit&#34;&gt;go-kit&lt;/h3&gt;
+&lt;p&gt;一个分布式的开发工具集，在大型的组织(业务)中可以用来构建微服务。其解决了分布式系统中大多数的常见问题，因此使用者可以将精力集中在业务逻辑上。&lt;/p&gt;
+&lt;h4 id=&#34;go-kit的架构图分为三层结构&#34;&gt;go-kit的架构图分为三层结构：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Transport 层&lt;/li&gt;
+&lt;li&gt;Endpoint 层&lt;/li&gt;
+&lt;li&gt;Service 层&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Transport层主要负责与传输协议HTTP，GRPC，THRIFT等相关的逻辑；&lt;/p&gt;
+&lt;p&gt;Endpoint层主要负责request／response格式的转换，以及公用拦截器相关的逻辑；&lt;/p&gt;
+&lt;p&gt;Service层则专注于业务逻辑，就是我们的业务类、接口等相关信息存放。&lt;/p&gt;
+&lt;p&gt;go-kit除了经典的分层架构外，还在endpoint层提供了很多公用的拦截器，如log，metric，tracing，circuitbreaker，rate-limiter等，来保障业务系统的可用性。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tva1.sinaimg.cn/large/008i3skNgy1gxp1w8czh2j30zo0oyjt3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://jessica0811.github.io/categories/golang/" term="golang" label="golang" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://jessica0811.github.io/tags/%E4%B8%BB%E9%A1%B5/" term="主页" label="主页" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">微服务1</title>
+            <link rel="alternate" type="text/html" href="https://jessica0811.github.io/posts/second/" />
+            <id>https://jessica0811.github.io/posts/second/</id>
+            <updated>2022-01-16T14:12:31&#43;08:00</updated>
+            <published>2022-01-12T00:00:00&#43;00:00</published>
+            <author>
+                    <name>jessica</name>
+                    <uri>https://jessica0811.github.io/</uri>
+                    </author>
+            <summary type="html">微服务系列</summary>
+            
+                <content type="html">&lt;h4 id=&#34;开启consul服务注册的容器&#34;&gt;开启consul服务注册的容器&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;docker run -d --name=cs -p 8500:8500 consul agent -server -bootstrap -ui -client 0.0.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;反注册服务&#34;&gt;反注册服务&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;curl --request PUT http:localhost:8500/v1/agent/service/deregister/userservice  
+
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://jessica0811.github.io/categories/%E5%85%B6%E4%BB%96/" term="其他" label="其他" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://jessica0811.github.io/tags/%E4%B8%BB%E9%A1%B5/" term="主页" label="主页" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>
